@@ -220,8 +220,8 @@ fmatrix evaluate_simd(fmatrix x, fmatrix y, fmatrix coef, float intercept)
 int main(int argc, char *argv[])
 {
     // These are four linear regression models
-    auto &&[x, y, coef, intercept] = read_bin_data("data/calhouse.bin");
-    //auto &&[x, y, coef, intercept] = read_bin_data("data/allstate.bin");
+    //auto &&[x, y, coef, intercept] = read_bin_data("data/calhouse.bin");
+    auto &&[x, y, coef, intercept] = read_bin_data("data/allstate.bin");
     //auto &&[x, y, coef, intercept] = read_bin_data("data/diamonds.bin");
     //auto &&[x, y, coef, intercept] = read_bin_data("data/cpusmall.bin");
 
