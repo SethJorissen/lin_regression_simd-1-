@@ -223,11 +223,11 @@ int main(int argc, char *argv[])
     //auto &&[x, y, coef, intercept] = read_bin_data("data/calhouse.bin");
     //auto &&[x, y, coef, intercept] = read_bin_data("data/allstate.bin");
     //auto &&[x, y, coef, intercept] = read_bin_data("data/diamonds.bin");
-    auto &&[x, y, coef, intercept] = read_bin_data("data/cpusmall.bin");
+    //auto &&[x, y, coef, intercept] = read_bin_data("data/cpusmall.bin");
 
     // This is a logistic regression model, but can be evaluated in the same way
     // All you would need to do is apply the sigmoid to the values in `output_*`
-    //auto &&[x, y, coef, intercept] = read_bin_data("data/mnist_5vall.bin");
+    auto &&[x, y, coef, intercept] = read_bin_data("data/mnist_5vall.bin");
     
     // TODO repeat the number of time measurements to get a more accurate
     // estimate of the runtime.
