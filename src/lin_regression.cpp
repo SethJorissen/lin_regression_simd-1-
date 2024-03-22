@@ -101,8 +101,8 @@ read_bin_data(const char *fname)
     char buf[8];
     f.read(buf, 8);
 
-    size_t num_ex = *reinterpret_cast<size_t *>(&buf[0]);
-    size_t num_feat = *reinterpret_cast<size_t *>(&buf[4]);
+    int num_ex = *reinterpret_cast<int *>(&buf[0]);
+    int num_feat = *reinterpret_cast<int *>(&buf[4]);
 
     std::cout << "num_ex " << num_ex << ", num_feat " << num_feat << std::endl;
 
