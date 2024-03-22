@@ -176,7 +176,8 @@ fmatrix evaluate_simd(fmatrix x, fmatrix y, fmatrix coef, float intercept)
 
             __m256 xx = _mm256_loadu_ps(&column[0]);
             __m256 cc = _mm256_broadcast_ss(&coef[j]);
-            result = _mm256_fmadd_ps(xx, cc, result);
+            xx = _mm256_mul_ps(xx, cc);
+            result = _mm256_add_ps(xx, result);
         }
 
         for (size_t k = 0; k < 8; k++)
